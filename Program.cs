@@ -22,3 +22,30 @@ for (int i = 0; i < length; i++)
 }
 PrintArray(arr);
 
+//------------------------------------------------
+
+//Метод поиска слов, в которых меньше 3-х символов
+void ArrayThreeSymbols (string[] arr)
+{
+    int resultLength = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if(arr[i].Length <= 3)
+        {
+            resultLength++;
+        }
+    }
+    string[] result = new string[resultLength];
+    int resultIndex = 0;
+    for (int k = 0; k < arr.Length; k++)
+    {
+        if(arr[k].Length <= 3)
+        {
+           result[resultIndex] = arr[k];
+           resultIndex++;
+        }
+    }
+    PrintArray(result);
+}
+
+ArrayThreeSymbols(arr);
